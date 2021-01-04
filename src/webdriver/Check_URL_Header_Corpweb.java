@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Check_URL_Corpweb {
+public class Check_URL_Header_Corpweb {
 	WebDriver driver;
 	Actions action;
 	WebDriverWait expliciWait;
@@ -40,7 +40,9 @@ public class Check_URL_Corpweb {
 	}
 	
 // TOP MENU		
-		public void TC_topmenu() throws InterruptedException {
+	
+
+	public void TC_topmenu() throws InterruptedException {
 			driver.get("https://www.vinamilk.com.vn/"); 
 			    
 			  // Mua hàng trực tuyến
@@ -140,7 +142,7 @@ public class Check_URL_Corpweb {
 		    Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/vi");
 	}
 	
-@Test
+
 	public void TC_02_mainmenu_Câu_chuyện_Vinamilk() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
@@ -187,7 +189,7 @@ public class Check_URL_Corpweb {
 		    
 		}
 	
-@Test
+
 	public void TC_03_mainmenu_Phát_triển_bền_vững() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
@@ -239,11 +241,11 @@ public class Check_URL_Corpweb {
 		    
 		}
 
-@Test
-	public void TC_04_mainmenu_Cải_tiến_đổi_mới() throws InterruptedException {
+
+	public void TC_04_mainmenu_Cải_tiến_đổ_mới() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
-		    // Cải tiến & đổi mới
+		    // Cải tiến và đổi mới
 		    driver.findElement(By.xpath("//div[@class='corp-header__menu']//a[contains(text(),'Cải tiến & Đổi mới')]")).click();
 		    sleepInSecond(2);
 		    Assert.assertEquals(driver.getTitle(),"Phát triển sản phẩm Vinamilk | Vinamilk Việt Nam - Vinamilk");
@@ -267,7 +269,7 @@ public class Check_URL_Corpweb {
 		    
 		}
 	
-@Test
+
 	public void TC_05_mainmenu_Vùng_nguyên_liệu() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
@@ -303,7 +305,7 @@ public class Check_URL_Corpweb {
 		    Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/vi/vung-nguyen-lieu/thong-tin-lien-lac");
 		}
 	
-@Test
+
 	public void TC_06_mainmenu_Truyền_thông() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
@@ -334,7 +336,7 @@ public class Check_URL_Corpweb {
 		    Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/vi/thong-tin-lien-lac");
 		}
 
-@Test
+
 	public void TC_07_mainmenu_Search() throws InterruptedException {
 		driver.get("https://www.vinamilk.com.vn/"); 
 		    
@@ -353,7 +355,7 @@ public class Check_URL_Corpweb {
 		    Assert.assertEquals(driver.getCurrentUrl(), "https://www.vinamilk.com.vn/vi/search?q=vinamilk");
 	}
 	
-@Test
+@Test 
 	public void TC_08_mainmenu_Sản_Phẩm() {
 		driver.get("https://www.vinamilk.com.vn/");
 		
@@ -393,7 +395,7 @@ public class Check_URL_Corpweb {
 		Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/sua-bot-vinamilk/vi/");
 		driver.navigate().back();
 		
-	// Bột ăn dặm	
+	// Bột ăn dặm
 		action.moveToElement(driver.findElement(By.xpath("//nav[@class='corp-header__main-menu']//a[text()='Sản Phẩm']"))).perform();
 		driver.findElement(By.xpath("//nav[@class='corp-header__main-menu']//a[contains(text(),'Bột ăn dặm')]")).click();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/the-gioi-an-dam/");
@@ -520,7 +522,7 @@ public class Check_URL_Corpweb {
 		driver.findElement(By.xpath("//nav[@class='corp-header__main-menu']//a[contains(text(),'Phô Mai')]")).click();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/vi/san-pham/pho-mai/pho-mai-vinamilk");
 		driver.navigate().back();
-	//Sữa Gạo Rang
+	//Sữa gạo Rang
 		action.moveToElement(driver.findElement(By.xpath("//nav[@class='corp-header__main-menu']//a[text()='Sản Phẩm']"))).perform();
 		driver.findElement(By.xpath("//nav[@class='corp-header__main-menu']//a[@title='Sữa Gạo Rang']")).click();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://www.vinamilk.com.vn/vi/nhan-hieu/sua-gao-rang");
@@ -600,12 +602,12 @@ public class Check_URL_Corpweb {
 //		//duyệt qua từng ID đã lấy được
 //		for (String runWindow : allWidows) {
 //			
-//			// nếu ID nào khác vs parent 
+//			// nếu ID nào khác vs parent
 //			if(!runWindow.equals(parentID)) {
 //				
 //				// Switch qua
 //				driver.switchTo().window(runWindow);
-//				break; // Thoát vòng lặp
+//				break;  // Thoát vòng lặp
 //			}
 //		}			
 //	}
