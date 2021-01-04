@@ -5,7 +5,7 @@
     <classes>
       <class name="webdriver.Check_URL_Corpweb">
         <methods>
-          <include name="TC_07_mainmenu_Search"/>
+          <include name="TC_08_mainmenu_Sản_Phẩm"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
