@@ -177,12 +177,12 @@ public class Corpweb_footer {
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//a[@href='https://appsto.re/vn/2t-lib.i']")).click();
 		
 		switchToWindowByID(parentWindownID);		
-		Assert.assertEquals(driver.getCurrentUrl(),"https://apps.apple.com/vn/app/gi%E1%BA%A5c-m%C6%A1-s%E1%BB%AFa-vi%E1%BB%87t/id1211098358?mt=8");
+		Assert.assertEquals(driver.getCurrentUrl(),"https://appsto.re/vn/2t-lib.i");
 		
 		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
 		sleepInSecond(3);
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.vinamilk.com.vn/");
-		
+		 
 //	google play
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//a[@href='https://play.google.com/store/apps/details?id=com.giacmosuaviet']//img")).click();
 		
@@ -210,7 +210,7 @@ public class Corpweb_footer {
 		
 		switchToWindowByTitle("Đăng nhập Facebook | Facebook");
 		sleepInSecond(3);
-		Assert.assertEquals(driver.getTitle(),"Đăng nhập Facebook | Facebook");
+		Assert.assertEquals(driver.getTitle(),"Vinamilk Baby Care - Trang chủ | Facebook");
 		
 		driver.close();
 				
@@ -222,9 +222,9 @@ public class Corpweb_footer {
 		action.moveToElement(driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//img[@src='https://www.vinamilk.com.vn/static/tpl/dist/assets/images/footer-network-2/social-fb.png']"))).perform();
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//a[text()='Vinamilk - Bí Quyết Ngon Khỏe Từ Thiên Nhiên']")).click();	
 		
-		switchToWindowByTitle("Đăng nhập Facebook | Facebook");
+		switchToWindowByTitle("Vinamilk - Bí Quyết Ngon Khỏe Từ Thiên Nhiên | Facebook");
 		sleepInSecond(3);
-		Assert.assertEquals(driver.getTitle(),"Đăng nhập Facebook | Facebook");
+		Assert.assertEquals(driver.getTitle(),"Vinamilk - Bí Quyết Ngon Khỏe Từ Thiên Nhiên | Facebook");
 		
 		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
 		sleepInSecond(3);
@@ -234,9 +234,9 @@ public class Corpweb_footer {
 		action.moveToElement(driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//img[@src='https://www.vinamilk.com.vn/static/tpl/dist/assets/images/footer-network-2/social-fb.png']"))).perform();
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//a[text()='Vinamilk - Giấc Mơ Sữa Việt']")).click();	
 				
-		switchToWindowByTitle("Đăng nhập Facebook | Facebook");
+		switchToWindowByTitle("Giấc Mơ Sữa Việt - Vinamilk eShop - Trang chủ | Facebook");
 		sleepInSecond(3);
-		Assert.assertEquals(driver.getTitle(),"Đăng nhập Facebook | Facebook");
+		Assert.assertEquals(driver.getTitle(),"Giấc Mơ Sữa Việt - Vinamilk eShop - Trang chủ | Facebook");
 						
 		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
 		sleepInSecond(3);
@@ -246,7 +246,7 @@ public class Corpweb_footer {
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//a[@href='https://www.youtube.com/user/vinamilk']//img")).click();
 		
 		switchToWindowByTitle("Vinamilk - YouTube");
-		Assert.assertEquals(driver.getCurrentUrl(),"https://www.youtube.com/user/vinamilk");
+		Assert.assertEquals(driver.getCurrentUrl(),"https://www.youtube.com/channel/UCS9JKqDiIJqps1S8kpcx2Xg");
 		
 		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
 		sleepInSecond(3);
@@ -288,7 +288,19 @@ public class Corpweb_footer {
 		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
 		sleepInSecond(3);
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.vinamilk.com.vn/");
-
+		
+		driver.close();
+		
+//		In
+		driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -social']//a[@href='https://www.linkedin.com/company/vinamilk']")).click();
+		switchToWindowByUrl("https://www.linkedin.com/company/vinamilk");
+		Assert.assertEquals(driver.getCurrentUrl(),"https://www.linkedin.com/company/vinamilk");
+		
+		switchToWindowByTitle("Vinamilk - Vươn cao Việt Nam - Vinamilk");
+		sleepInSecond(3);
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.vinamilk.com.vn/");
+		
+		
 // Icon Bộ công thương
 		driver.findElement(By.xpath("//div[@class='footer-network-2']//div[@class='footer-network-2__col -bct']//img")).click();
 		
@@ -302,6 +314,12 @@ public class Corpweb_footer {
 	}
 	
 	
+	private void switchToWindowByUrl(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	public void TC_03_() {
 	
 	}
